@@ -10,12 +10,12 @@ Criar solução completa em camadas (DB, EJB, Backend, Frontend), corrigindo bug
 
 ## 📦 Estrutura
 
-•	db/: scripts schema e seed
-•	ejb-module/: serviço EJB com bug a ser corrigido
-•	backend-module/: backend Spring Boot
-•	frontend/: app Angular
-•	docs/: instruções e critérios
-•	.github/workflows/: CI
+- db/: scripts schema e seed
+- ejb-module/: serviço EJB com bug a ser corrigido
+- backend-module/: backend Spring Boot
+- frontend/: app Angular
+- docs/: instruções e critérios
+- .github/workflows/: CI
 
 ## ✅ Tarefas do candidato
 
@@ -29,15 +29,15 @@ Criar solução completa em camadas (DB, EJB, Backend, Frontend), corrigindo bug
 
 ## 🐞 Bug no EJB
 
-•	Transferência não verifica saldo, não usa locking, pode gerar inconsistência
-•	Espera-se correção com validações, rollback, locking/optimistic locking
+- Transferência não verifica saldo, não usa locking, pode gerar inconsistência
+- Espera-se correção com validações, rollback, locking/optimistic locking
 
 ## 📊 Critérios de avaliação
 
-•	Arquitetura em camadas (20%)
-•	Correção EJB (20%)
-•	CRUD + Transferência (15%)
-•	Qualidade de código (10%)
-•	Testes (15%)
-•	Documentação (10%)
-•	Frontend (10%)
+- Arquitetura em camadas (20%)
+- Correção EJB (20%)
+- CRUD + Transferência (15%)
+- Qualidade de código (10%)
+- Testes (15%)
+- Documentação (10%)
+- Frontend (10%)
