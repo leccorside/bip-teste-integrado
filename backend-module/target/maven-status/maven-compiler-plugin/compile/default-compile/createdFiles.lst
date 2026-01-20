@@ -1,0 +1,14 @@
+com\example\backend\repository\BeneficioRepository.class
+com\example\backend\service\BeneficioService.class
+com\example\backend\exception\GlobalExceptionHandler$ErrorResponse.class
+com\example\backend\BackendApplication.class
+com\example\backend\model\Beneficio.class
+com\example\backend\BeneficioController.class
+com\example\backend\config\CorsConfig.class
+com\example\backend\exception\GlobalExceptionHandler.class
+com\example\backend\dto\BeneficioResponse.class
+com\example\backend\dto\TransferenciaRequest.class
+com\example\backend\dto\BeneficioRequest.class
+com\example\backend\HomeController.class
+com\example\backend\config\EjbConfig.class
+com\example\backend\config\OpenApiConfig.class

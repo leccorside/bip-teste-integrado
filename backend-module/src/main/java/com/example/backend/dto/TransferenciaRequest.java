@@ -1,15 +1,15 @@
-﻿package com.example.backend.dto;
+package com.example.backend.dto;
 
 import java.math.BigDecimal;
 
 public class TransferenciaRequest {
-    @jakarta.validation.constraints.NotNull(message = "ID do benefÃ­cio de origem Ã© obrigatÃ³rio")
+    @jakarta.validation.constraints.NotNull(message = "ID do benefício de origem é obrigatório")
     private Long fromId;
 
-    @jakarta.validation.constraints.NotNull(message = "ID do benefÃ­cio de destino Ã© obrigatÃ³rio")
+    @jakarta.validation.constraints.NotNull(message = "ID do benefício de destino é obrigatório")
     private Long toId;
 
-    @jakarta.validation.constraints.NotNull(message = "Valor Ã© obrigatÃ³rio")
+    @jakarta.validation.constraints.NotNull(message = "Valor é obrigatório")
     @jakarta.validation.constraints.DecimalMin(value = "0.01", message = "Valor deve ser maior que zero")
     private BigDecimal valor;
 

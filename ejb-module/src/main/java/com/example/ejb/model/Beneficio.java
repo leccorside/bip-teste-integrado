@@ -7,7 +7,7 @@ import java.math.BigDecimal;
  * Entidade JPA representando um Benefício.
  * Implementa optimistic locking através do campo VERSION.
  */
-@Entity
+@Entity(name = "BeneficioEjb")
 @Table(name = "BENEFICIO")
 public class Beneficio {
 

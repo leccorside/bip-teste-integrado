@@ -1,0 +1,13 @@
+E:\0000000-PROJETOS\bip-teste-integrado\backend-module\src\main\java\com\example\backend\HomeController.java
+E:\0000000-PROJETOS\bip-teste-integrado\backend-module\src\main\java\com\example\backend\config\CorsConfig.java
+E:\0000000-PROJETOS\bip-teste-integrado\backend-module\src\main\java\com\example\backend\repository\BeneficioRepository.java
+E:\0000000-PROJETOS\bip-teste-integrado\backend-module\src\main\java\com\example\backend\dto\BeneficioRequest.java
+E:\0000000-PROJETOS\bip-teste-integrado\backend-module\src\main\java\com\example\backend\BeneficioController.java
+E:\0000000-PROJETOS\bip-teste-integrado\backend-module\src\main\java\com\example\backend\dto\BeneficioResponse.java
+E:\0000000-PROJETOS\bip-teste-integrado\backend-module\src\main\java\com\example\backend\exception\GlobalExceptionHandler.java
+E:\0000000-PROJETOS\bip-teste-integrado\backend-module\src\main\java\com\example\backend\model\Beneficio.java
+E:\0000000-PROJETOS\bip-teste-integrado\backend-module\src\main\java\com\example\backend\BackendApplication.java
+E:\0000000-PROJETOS\bip-teste-integrado\backend-module\src\main\java\com\example\backend\config\OpenApiConfig.java
+E:\0000000-PROJETOS\bip-teste-integrado\backend-module\src\main\java\com\example\backend\dto\TransferenciaRequest.java
+E:\0000000-PROJETOS\bip-teste-integrado\backend-module\src\main\java\com\example\backend\config\EjbConfig.java
+E:\0000000-PROJETOS\bip-teste-integrado\backend-module\src\main\java\com\example\backend\service\BeneficioService.java

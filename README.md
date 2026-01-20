@@ -131,6 +131,8 @@ bip-teste-integrado/
 - **Node.js 18+** e **npm**
 - **Angular CLI 17+** (`npm install -g @angular/cli`)
 
+> ⚠️ **IMPORTANTE:** Se você receber erro "mvn não é reconhecido", consulte o [**INSTALACAO_COMPLETA.md**](INSTALACAO_COMPLETA.md) para instruções detalhadas de instalação no Windows.
+
 ## 🚀 Instalação e Execução
 
 ### 1. Clonar o Repositório

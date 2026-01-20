@@ -1,0 +1,5 @@
+com\example\ejb\exception\SaldoInsuficienteException.class
+com\example\ejb\BeneficioEjbService.class
+com\example\ejb\exception\BeneficioNaoEncontradoException.class
+com\example\ejb\model\Beneficio.class
+com\example\ejb\exception\OptimisticLockException.class

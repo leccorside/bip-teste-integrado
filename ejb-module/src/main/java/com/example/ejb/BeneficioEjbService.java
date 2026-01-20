@@ -9,7 +9,6 @@ import jakarta.ejb.TransactionAttribute;
 import jakarta.ejb.TransactionAttributeType;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.LockModeType;
-import jakarta.persistence.OptimisticLockException as JpaOptimisticLockException;
 import jakarta.persistence.PersistenceContext;
 import java.math.BigDecimal;
 
@@ -104,9 +103,9 @@ public class BeneficioEjbService {
             // Se houver conflito de versão, o JPA lançará OptimisticLockException
             // que será capturada e relançada como nossa exceção customizada
             
-        } catch (JpaOptimisticLockException e) {
+        } catch (jakarta.persistence.OptimisticLockException e) {
             // Rollback automático pela anotação @TransactionAttribute(REQUIRED)
-            throw new OptimisticLockException(
+            throw new com.example.ejb.exception.OptimisticLockException(
                 "Conflito de concorrência detectado. A operação foi cancelada. Tente novamente.", 
                 e
             );

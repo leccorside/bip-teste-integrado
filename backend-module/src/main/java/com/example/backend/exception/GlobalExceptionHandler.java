@@ -1,4 +1,4 @@
-﻿package com.example.backend.exception;
+package com.example.backend.exception;
 
 import com.example.ejb.exception.BeneficioNaoEncontradoException;
 import com.example.ejb.exception.OptimisticLockException;
@@ -17,7 +17,7 @@ import java.util.Map;
 public class GlobalExceptionHandler {
     @ExceptionHandler(BeneficioNaoEncontradoException.class)
     public ResponseEntity<ErrorResponse> handleBeneficioNaoEncontrado(BeneficioNaoEncontradoException ex) {
-        ErrorResponse error = new ErrorResponse(HttpStatus.NOT_FOUND.value(), "BenefÃ­cio nÃ£o encontrado", ex.getMessage(), LocalDateTime.now());
+        ErrorResponse error = new ErrorResponse(HttpStatus.NOT_FOUND.value(), "Benefício não encontrado", ex.getMessage(), LocalDateTime.now());
         return new ResponseEntity<>(error, HttpStatus.NOT_FOUND);
     }
     @ExceptionHandler(SaldoInsuficienteException.class)
@@ -27,12 +27,12 @@ public class GlobalExceptionHandler {
     }
     @ExceptionHandler(OptimisticLockException.class)
     public ResponseEntity<ErrorResponse> handleOptimisticLock(OptimisticLockException ex) {
-        ErrorResponse error = new ErrorResponse(HttpStatus.CONFLICT.value(), "Conflito de concorrÃªncia", ex.getMessage(), LocalDateTime.now());
+        ErrorResponse error = new ErrorResponse(HttpStatus.CONFLICT.value(), "Conflito de concorrência", ex.getMessage(), LocalDateTime.now());
         return new ResponseEntity<>(error, HttpStatus.CONFLICT);
     }
     @ExceptionHandler(IllegalArgumentException.class)
     public ResponseEntity<ErrorResponse> handleIllegalArgument(IllegalArgumentException ex) {
-        ErrorResponse error = new ErrorResponse(HttpStatus.BAD_REQUEST.value(), "Argumento invÃ¡lido", ex.getMessage(), LocalDateTime.now());
+        ErrorResponse error = new ErrorResponse(HttpStatus.BAD_REQUEST.value(), "Argumento inválido", ex.getMessage(), LocalDateTime.now());
         return new ResponseEntity<>(error, HttpStatus.BAD_REQUEST);
     }
     @ExceptionHandler(MethodArgumentNotValidException.class)
@@ -45,14 +45,17 @@ public class GlobalExceptionHandler {
         });
         Map<String, Object> response = new HashMap<>();
         response.put("status", HttpStatus.BAD_REQUEST.value());
-        response.put("message", "Erro de validaÃ§Ã£o");
+        response.put("message", "Erro de validação");
         response.put("errors", errors);
         response.put("timestamp", LocalDateTime.now());
         return new ResponseEntity<>(response, HttpStatus.BAD_REQUEST);
     }
     @ExceptionHandler(Exception.class)
     public ResponseEntity<ErrorResponse> handleGenericException(Exception ex) {
-        ErrorResponse error = new ErrorResponse(HttpStatus.INTERNAL_SERVER_ERROR.value(), "Erro interno do servidor", ex.getMessage(), LocalDateTime.now());
+        // Log da exceção completa para debug
+        ex.printStackTrace();
+        String message = ex.getMessage() != null ? ex.getMessage() : ex.getClass().getSimpleName();
+        ErrorResponse error = new ErrorResponse(HttpStatus.INTERNAL_SERVER_ERROR.value(), "Erro interno do servidor", message, LocalDateTime.now());
         return new ResponseEntity<>(error, HttpStatus.INTERNAL_SERVER_ERROR);
     }
     public static class ErrorResponse {

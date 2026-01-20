@@ -24,6 +24,7 @@ import java.util.Map;
  */
 @RestController
 @RequestMapping("/api/v1/beneficios")
+@CrossOrigin(origins = {"http://localhost:4200", "http://127.0.0.1:4200"})
 @Tag(name = "Benefícios", description = "API para gerenciamento de benefícios")
 public class BeneficioController {
 

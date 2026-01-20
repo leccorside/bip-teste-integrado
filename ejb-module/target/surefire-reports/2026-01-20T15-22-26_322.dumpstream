@@ -1,0 +1,5 @@
+# Created at 2026-01-20T15:22:26.624
+Boot Manifest-JAR contains absolute paths in classpath 'E:\0000000-PROJETOS\bip-teste-integrado\ejb-module\target\test-classes'
+Hint: <argLine>-Djdk.net.URLClassPath.disableClassPathURLCheck=true</argLine>
+'other' has different root
+
